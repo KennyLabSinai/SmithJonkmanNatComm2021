@@ -3,7 +3,7 @@
 """
 Created on Sun Dec 15 17:30:50 2019
 
-@author: smith
+@author: Alexander C.W. Smith, PhD, for lab of Paul Kenny @ Mount Sinai
 
 """
 
@@ -15,15 +15,10 @@ import os
 import matplotlib.pyplot as plt
 import argparse
 
-# directory = '/d2/studies/ClearMap/IA_iDISCO/NatComm_Supplement/']
-
-# samples = ['IA1_LB', 'IA1_LT', 'IA1_NP', 'IA1_RB', 'IA1_RT', 
-#            'IA2_LB', 'IA2_LT', 'IA2_NP', 'IA2_RB', 'IA2_RT']
-
 def parseSubregions(directory, hemisphere, samples, save=False):
     """Docstring:
         This function works with cell center coordinates for an isolated Allen Brain Atlas (ABA) 
-	parent region that are created ClearMap overlayPoints & region isolation functions (Renier et al., 2016). 
+        ent region that are created ClearMap overlayPoints & region isolation functions (Renier et al., 2016). 
         The function of this script is to split points into sub-groups along A/P or M/L axes, 
         allowing quantification of points in distinct subregions.
 
@@ -32,8 +27,8 @@ def parseSubregions(directory, hemisphere, samples, save=False):
         into two segments. The posterior segment is the tail of the caudate, and is not examined here (as is common in the field).
         Because the borders of anterior segment of the DS has significant curvature along the AP axis (moving medial as it moves anterior),
         split this segment into 6 bins in the A/P axis. The first two bins are considered anterior, the middle two are considered middle, 
-	and final two are considered posterior. For each of these 3 A/P bins, we then split into two bins along the X axis in order to 
-	quantify cells in the medial/lateral subdivisions.
+        final two are considered posterior. For each of these 3 A/P bins, we then split into two bins along the X axis in order to 
+        quantify cells in the medial/lateral subdivisions.
         
         Parameters
         ----------
@@ -41,6 +36,9 @@ def parseSubregions(directory, hemisphere, samples, save=False):
         samples: list of strings, sample names (needs to be consistent with folder and file names within directory)
         hemisphere: string, 'left' or 'right'
         
+        Returns
+        -------
+        Parsed data. Also writes a CSV file if save=True.
     """
     if hemisphere != 'right' and hemisphere != 'left':
         raise NameError("Invalid hemisphere name, must be 'left' or 'right'")
@@ -175,5 +173,4 @@ if __name__ == '__main__':
     parser.add_argument('--hemisphere', default='left')
     parser.add_argument('--save', default=False)
     args = parser.parse_args()
-
     parseSubregions(args.directory, args.hemisphere, args.samples, args.save)
