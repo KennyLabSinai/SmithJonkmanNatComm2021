@@ -1,4 +1,4 @@
-addpath('/home/smith/Smith_Scripts/SmithJonkmanNatComm2021/CalciumImaging/');
+addpath('/d1/studies/Calcium_Imaging/');
 addpath(genpath('/d1/studies/DLS_D2_Feb2018'));
 
 directories=dir('/d1/studies/DLS_D2_Feb2018');
