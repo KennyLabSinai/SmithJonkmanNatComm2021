@@ -1,4 +1,4 @@
-## Instructions for using Python code for parsing ClearMap cell counts into subregions.
+## Instructions for using Python code for parsing ClearMap cell counts into subregions - written by Alexander C.W. Smith, alexander.smith@mssm.edu
 ### This code relies on outputs from the ClearMap package. The ClearMap documentation with installation instructions is included here, and code can be found at www.github.com/christophkirst/clearmap
 
 ### System requirements:
