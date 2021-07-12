@@ -1,4 +1,4 @@
-%% 
+%% Written by Alexandra Difeliceantonio & Michael Romano
    %Extract traces from videos
     clear
     %select video
@@ -31,7 +31,7 @@
     end
     save(sprintf('%s/traces_R.mat',viddir), 'R')
     
-    [unselectedIndices, selectedIndices] = markBadTraces_alex([R(1).Time]', [R.Deltaf]);
+    [unselectedIndices, selectedIndices] = markBadTraces([R(1).Time]', [R.Deltaf]);
     clean_R=R;
     clean_R(selectedIndices)=[];
     save(sprintf('%s/cleaned_traces_R.mat',viddir), 'clean_R')
