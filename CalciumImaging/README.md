@@ -3,7 +3,7 @@
 This code was adapted from:
 Gritton, H.J., Howe, W.M., Romano, M.F. et al.
 Unique contributions of parvalbumin and cholinergic interneurons in organizing striatal networks during movement.
-Nat Neurosci 22, 586?597 (2019).
+Nat Neurosci 22, 586-597 (2019).
 https://doi.org/10.1038/s41593-019-0341-3; PMID: 30804530
 
 And their associated code:
