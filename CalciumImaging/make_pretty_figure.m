@@ -1,4 +1,4 @@
-     addpath('/d1/software/matlab2017a/toolbox/BU_CI/image_processing_nd/');  
+    addpath('/d1/studies/Calcium_Imaging/SmithJonkmanNatComm2021/');  
     [tracename, tracedir]=uigetfile('/d1/studies/*.mat', 'Select .mat file with your traces');
     load([tracedir, tracename]);
     [vidname,viddir] = uigetfile('/d1/studies/*.uint16','MultiSelect','on', 'Select ALL video files');

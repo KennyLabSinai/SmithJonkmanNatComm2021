@@ -34,7 +34,7 @@ function [unselectedIndices, selectedIndices] = markBadTraces(taxis, traces) % t
     figure;
     maxVal = max(traces(:));
     [H, tracecell] = plotAllTraces(taxis, (traces/maxVal));
-    title([num2str(size(traces,2)) ' traces']);
+    title(['Select traces to exclude from data. Press enter to move to next.']);
     set(H.Children(1), 'ButtonDownFcn',@OnClickAxes);
     for lim=0:3:(length(tracecell))
         ylim([lim-.5 lim+2.5]);

@@ -1,6 +1,6 @@
 % written by Mike
 function [peakList] = peakListFromTrace(trace, stdThreshold)
-    traceFilt = removeMAMin(trace, 10, 500); %In vivo two-photon imaging of sensory-evoked dendritic calcium signals in cortical neurons
+    traceFilt = removeMAMin(trace, 10, 500);
     peakList = identifyPeakIndices(traceFilt, zeros(size(traceFilt)), stdThreshold);
     meanNoPeak = mean(traceFilt(~peakList));
     stdNoPeak = std(traceFilt(~peakList));

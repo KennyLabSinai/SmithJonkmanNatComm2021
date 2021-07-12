@@ -1,4 +1,4 @@
-addpath('/d1/software/matlab2017a/toolbox/BU_CI/image_processing_nd/');
+addpath('/home/smith/Smith_Scripts/SmithJonkmanNatComm2021/CalciumImaging/');
 addpath(genpath('/d1/studies/DLS_D2_Feb2018'));
 
 directories=dir('/d1/studies/DLS_D2_Feb2018');
