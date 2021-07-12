@@ -1,5 +1,5 @@
 % some code modified from https://gist.github.com/cholland29/3107790
-function [unselectedIndices, selectedIndices] = markBadTraces_alex(taxis, traces) % taxis is a vector of times; traces is a time point x samples matrix
+function [unselectedIndices, selectedIndices] = markBadTraces(taxis, traces) % taxis is a vector of times; traces is a time point x samples matrix
     selectedIndices = [];
     % following function modified from https://gist.github.com/cholland29/3107790
     function OnClickAxes(hax, ~)
